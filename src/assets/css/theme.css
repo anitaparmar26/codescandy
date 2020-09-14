@@ -14916,7 +14916,7 @@ button.close {
 .navbar {
   background-color: transparent;
   z-index: 1001;
-  padding: 18px 0px; }
+  padding: 16px 0px; }
   .navbar .navbar-toggler:focus {
     outline: 0px; }
   .navbar .navbar-toggler .icon-bar {
@@ -14961,25 +14961,25 @@ button.close {
   .navbar .navbar-nav .nav-item .nav-link {
     padding: 12px 20px !important;
     border-bottom: 1px solid #e1e0ee;
-    color: #000 !important; }
+    color: #1b1349 !important; }
     .navbar .navbar-nav .nav-item .nav-link:hover {
-      color: #000; } }
+      color: #1b1349; } }
 
 @media (max-width: 575.98px) {
   .navbar .nav-item .nav-link {
     padding: 12px 20px !important;
     border-bottom: 1px solid #e1e0ee;
-    color: #000 !important; }
+    color: #1b1349 !important; }
     .navbar .nav-item .nav-link:hover {
-      color: #000; } }
+      color: #1b1349; } }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
   .navbar .nav-item .nav-link {
     padding: 12px 20px !important;
     border-bottom: 1px solid #e1e0ee;
-    color: #000 !important; }
+    color: #1b1349 !important; }
     .navbar .nav-item .nav-link:hover {
-      color: #000; } }
+      color: #1b1349; } }
 
 @media (max-width: 991.98px) {
   .navbar .navbar-collapse {
@@ -15212,138 +15212,6 @@ a {
 
 .text-inherit {
   color: inherit; }
-
-.border-2 {
-  border-width: 2px !important; }
-
-.border-top-2 {
-  border-top-width: 2px !important; }
-
-.border-bottom-2 {
-  border-bottom-width: 2px !important; }
-
-.border-left-2 {
-  border-left-width: 2px !important; }
-
-.border-right-2 {
-  border-right-width: 2px !important; }
-
-.border-3 {
-  border-width: 3px !important; }
-
-.border-top-3 {
-  border-top-width: 3px !important; }
-
-.border-bottom-3 {
-  border-bottom-width: 3px !important; }
-
-.border-left-3 {
-  border-left-width: 3px !important; }
-
-.border-right-3 {
-  border-right-width: 3px !important; }
-
-.border-4 {
-  border-width: 4px !important; }
-
-.border-top-4 {
-  border-top-width: 4px !important; }
-
-.border-bottom-4 {
-  border-bottom-width: 4px !important; }
-
-.border-left-4 {
-  border-left-width: 4px !important; }
-
-.border-right-4 {
-  border-right-width: 4px !important; }
-
-.border-5 {
-  border-width: 5px !important; }
-
-.border-top-5 {
-  border-top-width: 5px !important; }
-
-.border-bottom-5 {
-  border-bottom-width: 5px !important; }
-
-.border-left-5 {
-  border-left-width: 5px !important; }
-
-.border-right-5 {
-  border-right-width: 5px !important; }
-
-.rounded-top-0 {
-  border-top-left-radius: 0rem;
-  border-top-right-radius: 0rem; }
-
-.rounded-right-0 {
-  border-top-right-radius: 0rem;
-  border-bottom-right-radius: 0rem; }
-
-.rounded-bottom-0 {
-  border-bottom-right-radius: 0rem;
-  border-bottom-left-radius: 0rem; }
-
-.rounded-left-0 {
-  border-top-left-radius: 0rem;
-  border-bottom-left-radius: 0rem; }
-
-.rounded-top-lg {
-  border-top-left-radius: 0.625rem !important;
-  border-top-right-radius: 0.625rem !important; }
-
-.rounded-right-lg {
-  border-top-right-radius: 0.625rem !important;
-  border-bottom-right-radius: 0.625rem !important; }
-
-.rounded-bottom-lg {
-  border-bottom-right-radius: 0.625rem !important;
-  border-bottom-left-radius: 0.625rem !important; }
-
-.rounded-left-lg {
-  border-top-left-radius: 0.625rem !important;
-  border-bottom-left-radius: 0.625rem !important; }
-
-.grayscale {
-  filter: grayscale(100%);
-  opacity: .5; }
-
-.top-0 {
-  top: 0 !important; }
-
-.right-0 {
-  right: 0 !important; }
-
-.bottom-0 {
-  bottom: 0 !important; }
-
-.left-0 {
-  left: 0 !important; }
-
-.img-zoom {
-  border-radius: .25rem;
-  overflow: hidden; }
-  .img-zoom img {
-    transition: transform .5s ease; }
-    .img-zoom img:hover {
-      transform: scale(1.1); }
-
-.status {
-  width: 8px;
-  height: 8px;
-  background-color: transparent;
-  border-radius: 10px; }
-
-.lift {
-  display: block;
-  overflow: hidden;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px 0 transparent;
-  transition: box-shadow 200ms ease, transform 200ms ease; }
-  .lift:hover {
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.1);
-    transform: translate(0px, -12px); }
 
 @media (max-width: 1440px) {
   .hero-img {

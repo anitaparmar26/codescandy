@@ -2,7 +2,7 @@
     .navbar {
         background-color: transparent;
         z-index: 1001;
-        padding: 18px 0px;
+        padding: 16px 0px;
         .navbar-toggler {
             &:focus {
                 outline: 0px;
@@ -73,9 +73,9 @@
                     .nav-link {
                         padding: 12px 20px !important;
                         border-bottom: 1px solid $gray-200;
-                        color: $black !important;
+                        color: $dark !important;
                         &:hover {
-                            color: $black;
+                            color: $dark;
                         }
                     }
                 }
@@ -88,9 +88,9 @@
             .nav-link {
                 padding: 12px 20px !important;
                 border-bottom: 1px solid $gray-200;
-                color: $black !important;
+                color: $dark !important;
                 &:hover {
-                    color: $black;
+                    color: $dark;
                 }
             }
         }
@@ -102,9 +102,9 @@
                 .nav-link {
                     padding: 12px 20px !important;
                     border-bottom: 1px solid $gray-200;
-                    color: $black !important;
+                    color: $dark !important;
                     &:hover {
-                        color: $black;
+                        color: $dark;
                     }
                 }
             }
