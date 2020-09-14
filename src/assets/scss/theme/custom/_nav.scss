@@ -1,0 +1,17 @@
+// navs
+.custom-list-group {
+    .list-group-item {
+        flex-grow: 1;
+        text-align: center;
+        padding: .9rem 1rem;
+    }
+    .list-group-link {
+        color: $gray-800;
+        &.active {
+            color: $primary;
+        }
+        &:hover {
+            color: $primary;
+        }
+    }
+}

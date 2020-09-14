@@ -1,0 +1,25 @@
+//  fonts
+$font-size: font !default;
+@for $i from 12 through 48 {
+    .#{$font-size}-#{$i} {
+        font-size: 0px + $i;
+    }
+}
+
+// Text base color 
+.text-base {
+    color: $body-color;
+}
+
+// Semi bold font weight
+.font-weight-semi-bold {
+    font-weight: $font-weight-semi-bold;
+}
+
+.font-weight-medium {
+    font-weight: $font-weight-medium;
+}
+
+.text-inherit {
+    color: inherit;
+}

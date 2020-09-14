@@ -1,0 +1,16 @@
+// Extended from Bootstrap
+// Body
+body {
+    -webkit-font-smoothing: antialiased;
+    letter-spacing: -0.03rem;
+}
+
+// Links
+a {
+    color: $link-color;
+    text-decoration: none;
+    &:hover {
+        color: $link-hover-color;
+        text-decoration: none;
+    }
+}
