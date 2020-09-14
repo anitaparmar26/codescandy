@@ -1,7 +1,7 @@
 // Color system
 $white: #fff !default;
 $gray-100: #e8e7ed !default;
-$gray-200: #d1d0db !default;
+$gray-200: #e1e0ee !default;
 $gray-300: #bbb8c7 !default;
 $gray-400: #a4a1b5 !default;
 $gray-500: #8d89a3 !default;
@@ -113,6 +113,8 @@ $hr-color: $gray-100 !default;
 $hr-opacity: 1 !default;
 // box shadow
 $box-shadow: 0px 4px 8px rgba(27, 19, 73, 0.05) !default;
+// list group
+$list-group-border-color : $gray-200 !default;
 // input
 $input-btn-padding-y: 0.6rem !default;
 $input-btn-padding-x: 1rem !default;
