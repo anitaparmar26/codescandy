@@ -1,179 +1,182 @@
-//
-// Variables ===================================
-//
 
-// Load dependencies
-const autoprefixer = require('gulp-autoprefixer');
-const browsersync = require('browser-sync').create();
-const cached = require('gulp-cached');
-const cleancss = require('gulp-clean-css');
-const del = require('del');
+// Load plugins
+const { src, dest, watch, parallel, series } = require("gulp");
+const sass = require('gulp-sass')(require('sass'));
+const gulpautoprefixer = require('gulp-autoprefixer');
+const browsersync = require("browser-sync").create();
 const fileinclude = require('gulp-file-include');
-const gulp = require('gulp');
-const gulpif = require('gulp-if');
-const npmdist = require('gulp-npm-dist');
-const replace = require('gulp-replace');
-const sass = require('gulp-sass');
-const uglify = require('gulp-uglify');
 const useref = require('gulp-useref');
+const cached = require("gulp-cached");
+const gulpIf = require("gulp-if");
+const del = require('del');
+const npmDist = require('gulp-npm-dist');
+const postcss = require('gulp-postcss');
+const cssnano = require('cssnano');
+const autoprefixer = require('autoprefixer');
+const replace = require('gulp-replace');
+const terser = require('gulp-terser');
 
-// Define paths
-const paths = {
-    base: {
-        base: {
-            dir: './'
-        },
-        node: {
-            dir: './node_modules'
-        }
+
+
+
+
+
+// Paths to project folders
+
+
+ const paths = {
+  base:{
+    base: './',
+    node: './node_modules'
     },
-    dist: {
-        base: {
-            dir: './dist'
-        },
-        libs: {
-            dir: './dist/assets/libs'
-        }
+  src:{
+    basesrc: './src',
+    basesrcfiles: './src/**/*',
+    scss: './src/assets/scss/**/*.scss',
+    css: './src/assets/css',
+    js: './src/assets/js/**/*.js',
+    html: './src/**/*.html',
+    images: './src/assets/images/**/*',
+    fonts: './src/assets/fonts/**/*',
+    assets: './src/assets/**/*',
+    partials: '.src/partials/**/*'
     },
-    src: {
-        base: {
-            dir: './src',
-            files: './src/**/*'
-        },
-        css: {
-            dir: './src/assets/css',
-            files: './src/assets/css/**/*'
-        },
-        html: {
-            dir: './src',
-            files: './src/**/*.html',
-        },
-        img: {
-            dir: './src/assets/img',
-            files: './src/assets/img/**/*',
-        },
-        js: {
-            dir: './src/assets/js',
-            files: './src/assets/js/**/*'
-        },
-        partials: {
-            dir: './src/partials',
-            files: './src/partials/**/*'
-        },
-        scss: {
-            dir: './src/assets/scss',
-            files: './src/assets/scss/**/*',
-            main: './src/assets/scss/*.scss'
-        },
-        tmp: {
-            dir: './src/.tmp',
-            files: './src/.tmp/**/*'
-        }
+  temp:{
+    basetemp: './.temp'
+    },
+  dist:{
+    basedist: './dist',
+    js: './dist/assets/js',
+    images: './dist/assets/images',
+    css: './dist/assets/css',
+    fonts: './dist/assets/fonts',
+    libs: './dist/assets/libs'
+
     }
-};
+}
 
-//
-// Tasks ===================================
-//
 
-gulp.task('browsersync', function(callback) {
-    browsersync.init({
-        server: {
-            baseDir: [paths.src.tmp.dir, paths.src.base.dir, paths.base.base.dir]
-        },
-    });
-    callback();
-});
-
-gulp.task('browsersyncReload', function(callback) {
-    browsersync.reload();
-    callback();
-});
-
-gulp.task('watch', function() {
-    gulp.watch(paths.src.scss.files, gulp.series('scss'));
-    gulp.watch([paths.src.js.files, paths.src.img.files], gulp.series('browsersyncReload'));
-    gulp.watch([paths.src.html.files, paths.src.partials.files], gulp.series('fileinclude', 'browsersyncReload'));
-});
-
-gulp.task('scss', function() {
-    return gulp
-        .src(paths.src.scss.main)
-        .pipe(sass().on('error', sass.logError))
-        .pipe(autoprefixer())
-        .pipe(gulp.dest(paths.src.css.dir))
+// SCSS to CSS
+function scss(callback) {
+    return src(paths.src.scss)
+        .pipe(sass().on("error", sass.logError))
+        .pipe(gulpautoprefixer())
+        .pipe(dest(paths.src.css))
         .pipe(browsersync.stream());
-});
-
-gulp.task('fileinclude', function(callback) {
-    return gulp
-        .src([
-            paths.src.html.files,
-            '!' + paths.src.tmp.files,
-            '!' + paths.src.partials.files
-        ])
-        .pipe(fileinclude({
-            prefix: '@@',
-            basepath: '@file',
-            indent: true
-        }))
-        .pipe(cached())
-        .pipe(gulp.dest(paths.src.tmp.dir));
-});
-
-gulp.task('clean:tmp', function(callback) {
-    del.sync(paths.src.tmp.dir);
     callback();
-});
+}
 
-gulp.task('clean:dist', function(callback) {
-    del.sync(paths.dist.base.dir);
+
+// Image
+function images(callback) {
+  return src(paths.src.images)
+        .pipe(dest(paths.dist.images))
     callback();
-});
+}
 
-gulp.task('copy:all', function() {
-    return gulp
-        .src([
-            paths.src.base.files,
-            '!' + paths.src.partials.dir, '!' + paths.src.partials.files,
-            '!' + paths.src.scss.dir, '!' + paths.src.scss.files,
-            '!' + paths.src.tmp.dir, '!' + paths.src.tmp.files,
-            '!' + paths.src.js.dir, '!' + paths.src.js.files,
-            '!' + paths.src.css.dir, '!' + paths.src.css.files,
-            '!' + paths.src.html.files,
-        ])
-        .pipe(gulp.dest(paths.dist.base.dir));
-});
 
-gulp.task('copy:libs', function() {
-    return gulp
-        .src(npmdist(), {
-            base: paths.base.node.dir
-        })
-        .pipe(gulp.dest(paths.dist.libs.dir));
-});
+// Font task
+function fonts(callback) {
+    return src(paths.src.fonts)
+    .pipe(dest(paths.dist.fonts))
+    callback();
+}
 
-gulp.task('html', function() {
-    return gulp
-        .src([
-            paths.src.html.files,
-            '!' + paths.src.tmp.files,
-            '!' + paths.src.partials.files
-        ])
-        .pipe(fileinclude({
-            prefix: '@@',
-            basepath: '@file',
-            indent: true
-        }))
-        .pipe(replace(/href="(.{0,10})node_modules/g, 'href="$1assets/libs'))
+
+// HTML
+function html(callback) {
+  return src([paths.src.html, '!./src/partials/**/*'])
+      .pipe(fileinclude({
+        prefix: '@@',
+        basepath: '@file'
+      }))
         .pipe(replace(/src="(.{0,10})node_modules/g, 'src="$1assets/libs'))
+        .pipe(replace(/href="(.{0,10})node_modules/g, 'href="$1assets/libs'))
         .pipe(useref())
         .pipe(cached())
-        .pipe(gulpif('*.js', uglify()))
-        .pipe(gulpif('*.css', cleancss()))
-        .pipe(gulp.dest(paths.dist.base.dir));
-});
+        .pipe(gulpIf('*.css', postcss([ autoprefixer(), cssnano() ]))) // PostCSS plugins with cssnano
+        .pipe(gulpIf('*.js', terser()))
+        .pipe(dest(paths.dist.basedist))
+        .pipe(browsersync.stream());
+    callback();
+}
 
-gulp.task('build', gulp.series(gulp.parallel('clean:tmp', 'clean:dist', 'copy:all', 'copy:libs'), 'scss', 'html'));
 
-gulp.task('default', gulp.series(gulp.parallel('fileinclude', 'scss'), gulp.parallel('browsersync', 'watch')));
+// File include task for temp
+function fileincludeTask(callback) {
+  return src([paths.src.html, '!./src/partials/**/*'])
+    .pipe(fileinclude({
+      prefix: '@@',
+      basepath: '@file',
+    }))
+    .pipe(cached())
+    .pipe(dest(paths.temp.basetemp));
+    callback();
+}
+
+
+// Copy libs file from nodemodules to dist
+function copyLibs(callback) {
+  return src(npmDist(),{base: paths.base.node})
+    .pipe(dest(paths.dist.libs));
+  callback();
+}
+
+
+// Clean .temp folder
+function cleanTemp(callback) {
+    del.sync(paths.temp.basetemp);
+    callback();
+}
+
+
+// Clean Dist folder
+function cleanDist(callback) {
+     del.sync(paths.dist.basedist);
+     callback();
+}
+
+
+// Browser Sync Serve
+function browsersyncServe(callback){
+  browsersync.init({
+    server: {
+      baseDir: [paths.temp.basetemp, paths.src.basesrc, paths.base.base]
+    }
+  });
+  callback();
+}
+
+
+// SyncReload
+function syncReload(callback){
+  browsersync.reload();
+  callback();
+}
+
+
+// Watch Task
+function watchTask(){
+  watch(paths.src.html, series( fileincludeTask, syncReload));
+  watch([paths.src.images, paths.src.fonts], series(images, fonts));
+  watch([paths.src.scss], series(scss, syncReload));
+}
+
+
+// Default Task Preview
+exports.default = series( fileincludeTask, browsersyncServe, watchTask );
+
+
+// Build Task for Dist
+exports.build = series(parallel(cleanDist), html, images, fonts, copyLibs, cleanTemp);
+
+
+// export tasks
+exports.scss = scss
+exports.images = images;
+exports.fonts = fonts
+exports.html = html;
+exports.fileincludeTask = fileincludeTask
+exports.copyLibs = copyLibs
+exports.cleanTemp = cleanTemp
+exports.cleanDist = cleanDist
