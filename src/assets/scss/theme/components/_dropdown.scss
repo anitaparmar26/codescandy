@@ -30,10 +30,15 @@
 
 // Dropdown item
 .dropdown-item {
-    padding: 0.25rem 1.5rem;
+    padding: 0.75rem 1.5rem;
     display: flex;
     align-items: center;
     font-weight: 500;
+    color: $gray-800;
+    &:hover {
+        background-color: $gray-100;
+        color: $gray-900;
+    }
 }
 
 // Dropdown menu sizes
