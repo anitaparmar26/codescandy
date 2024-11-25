@@ -1,65 +1,106 @@
-<!-- navigation -->
+<!-- Navbar -->
+<header>
+    <nav class="navbar navbar-expand-lg ">
+        <div class="container px-3">
+            <a class="navbar-brand" href="@@webRoot/index.html"><img src="@@webRoot/assets/images/codescandy-logo.svg"
+                    alt="" />
+                <span class="ms-1 fw-bold text-dark">CodesCandy</span>
+            </a>
+            <button class="navbar-toggler offcanvas-nav-btn" type="button">
+                <i class="bi bi-list"></i>
+            </button>
+            <div class="offcanvas offcanvas-start offcanvas-nav" style="width: 20rem">
+                <div class="offcanvas-header">
+                    <a href="@@webRoot/index.html" class="text-inverse"><img src="@@webRoot/assets/images/logo/logo.svg"
+                            alt /></a>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body pt-0 align-items-center">
+                    <ul class="navbar-nav ms-6 align-items-lg-center">
 
-<nav class="navbar navbar-expand-lg ">
-    <div class="container">
-        <a class="navbar-brand" href="@@webRoot/index.html"><img src="@@webRoot/assets/images/codescandy-logo.svg" alt="" /></a>
-        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbar-default" aria-controls="navbar-default" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="icon-bar top-bar mt-0"></span>
-    <span class="icon-bar middle-bar"></span>
-    <span class="icon-bar bottom-bar"></span>
-  </button>
-        <div class="collapse navbar-collapse" id="navbar-default">
-            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbar-default" aria-controls="navbar-default" aria-expanded="false" aria-label="Toggle navigation">
-      <i class="fas fa-times"></i>
-    </button>
-            <ul class="navbar-nav ">
-                <li class="nav-item">
-                    <a class="nav-link d-lg-none" href="#">
-          Menu
-        </a>
-                </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">Template</a>
+                            <div class="dropdown-menu dropdown-menu-lg">
 
-                <li class="nav-item ">
-                    <a class="nav-link " href="@@webRoot/pages/themes.html">
-         Themes
-        </a>
+                                <div>
+                                    <a href="#!" class="dropdown-item d-flex gap-3 align-items-center">
+                                        <span class="icon-shape icon-lg bg-secondary">
+                                            <svg width="28" height="28" viewBox="0 0 36 29" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <g clip-path="url(#clip0_3226_403)">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                        d="M7.95621 0.6875C5.94929 0.6875 4.46427 2.44408 4.53077 4.34905C4.59459 6.17921 4.51167 8.54953 3.91497 10.4825C3.31614 12.4209 2.3041 13.6493 0.650696 13.807V15.5871C2.3041 15.7451 3.31614 16.9728 3.9149 18.9115C4.51167 20.8445 4.59452 23.2148 4.5307 25.045C4.4642 26.9497 5.94923 28.7065 7.95648 28.7065H28.5207C30.5276 28.7065 32.0124 26.9499 31.9459 25.045C31.8821 23.2148 31.965 20.8445 32.5617 18.9115C33.1605 16.9728 34.1701 15.7446 35.8236 15.5871V13.807C34.1702 13.649 33.1606 12.4212 32.5617 10.4825C31.9649 8.5498 31.8821 6.17921 31.9459 4.34905C32.0124 2.44436 30.5276 0.6875 28.5207 0.6875H7.95593H7.95621ZM24.4967 17.935C24.4967 20.5581 22.5402 22.1489 19.2932 22.1489H13.766C13.6079 22.1489 13.4562 22.0861 13.3444 21.9743C13.2326 21.8625 13.1698 21.7109 13.1698 21.5528V7.84133C13.1698 7.68322 13.2326 7.53159 13.3444 7.41979C13.4562 7.30799 13.6079 7.24518 13.766 7.24518H19.2617C21.9692 7.24518 23.746 8.71172 23.746 10.9633C23.746 12.5437 22.5507 13.9585 21.0279 14.2064V14.2888C23.1009 14.5162 24.4967 15.952 24.4967 17.935ZM18.6905 9.13496H15.539V13.5865H18.1934C20.2453 13.5865 21.3768 12.7602 21.3768 11.2833C21.3766 9.89922 20.4038 9.13496 18.6905 9.13496ZM15.539 15.3528V20.2585H18.8065C20.943 20.2585 22.0746 19.4012 22.0746 17.7902C22.0746 16.1791 20.9112 15.3525 18.6691 15.3525H15.539V15.3528Z"
+                                                        fill="#7C24FE"></path>
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_3226_403">
+                                                        <rect width="35.1729" height="28.0257" fill="white"
+                                                            transform="translate(0.650726 0.683594)"></rect>
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+                                        </span>
+                                        <span class="text-inherit">Bootstrap Templates</span>
 
-                </li>
-                <li class="nav-item ">
-                    <a class="nav-link " href="@@webRoot/pages/about.html">
-       About
-        </a>
+                                    </a>
+                                    <a href="#!" class="dropdown-item d-flex gap-3 align-items-center">
+                                        <span class="icon-shape icon-lg bg-secondary">
+                                            <svg width="28" height="28" viewBox="0 0 40 41" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <g clip-path="url(#clip0_3226_426)">
+                                                    <mask id="mask0_3226_426" style="mask-type: luminance"
+                                                        maskUnits="userSpaceOnUse" x="1" y="0" width="39" height="40">
+                                                        <path d="M39.518 0.810547H1.0827V39.2458H39.518V0.810547Z"
+                                                            fill="white"></path>
+                                                    </mask>
+                                                    <g mask="url(#mask0_3226_426)">
+                                                        <path
+                                                            d="M19.0423 0.82089C18.9597 0.828402 18.6967 0.854699 18.4599 0.873481C13.0009 1.36559 7.88745 4.31073 4.64882 8.8374C2.8454 11.3543 1.69197 14.2092 1.25614 17.2333C1.1021 18.2889 1.08331 18.6007 1.08331 20.0319C1.08331 21.4632 1.1021 21.775 1.25614 22.8306C2.30062 30.047 7.43659 36.11 14.4023 38.3565C15.6496 38.7584 16.9647 39.0327 18.4599 39.1979C19.0423 39.2618 21.5596 39.2618 22.142 39.1979C24.723 38.9125 26.9097 38.2739 29.0663 37.1731C29.3969 37.0042 29.4608 36.9591 29.4157 36.9214C29.3857 36.8989 27.9767 35.0094 26.2861 32.7254L23.2127 28.5744L19.3617 22.8757C17.2427 19.7427 15.4994 17.1808 15.4843 17.1808C15.4693 17.177 15.4542 19.709 15.4468 22.8006C15.4354 28.2137 15.4317 28.4316 15.3642 28.5593C15.2665 28.7434 15.1913 28.8185 15.0335 28.9013C14.9132 28.9613 14.8081 28.9725 14.2407 28.9725H13.5907L13.4179 28.8636C13.3052 28.7922 13.2226 28.6984 13.1662 28.5894L13.0873 28.4204L13.0948 20.8884L13.1061 13.3528L13.2226 13.2063C13.2827 13.1274 13.4104 13.026 13.5006 12.9771C13.6546 12.902 13.7147 12.8945 14.3647 12.8945C15.1312 12.8945 15.2589 12.9245 15.458 13.1424C15.5144 13.2025 17.5996 16.3431 20.0944 20.1259C22.5891 23.9087 26.0005 29.074 27.6761 31.6097L30.7195 36.219L30.8735 36.1176C32.2373 35.2311 33.68 33.9688 34.8222 32.654C37.2531 29.8629 38.8198 26.4594 39.3458 22.8306C39.4998 21.775 39.5186 21.4632 39.5186 20.0319C39.5186 18.6007 39.4998 18.2889 39.3458 17.2333C38.3014 10.017 33.1653 3.95386 26.1996 1.70744C24.971 1.30924 23.6635 1.03501 22.1983 0.869724C21.8376 0.832159 19.3542 0.790837 19.0423 0.82089ZM26.9097 12.4437C27.0901 12.5339 27.2365 12.7067 27.2892 12.887C27.3193 12.9846 27.3267 15.0732 27.3193 19.7802L27.3079 26.5346L26.117 24.7089L24.9223 22.8832V17.9734C24.9223 14.7991 24.9372 13.0147 24.9598 12.9283C25.0198 12.7179 25.1514 12.5526 25.3317 12.455C25.4857 12.3761 25.5422 12.3686 26.1321 12.3686C26.688 12.3686 26.7857 12.3761 26.9097 12.4437Z"
+                                                            fill="black"></path>
+                                                    </g>
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_3226_426">
+                                                        <rect width="38.7022" height="40.0368" fill="white"
+                                                            transform="translate(0.816162 0.0107422)"></rect>
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+                                        </span>
+                                        <span class="text-inherit">Nextjs Templates</span>
 
-                </li>
-                <li class="nav-item ">
-                    <a class="nav-link " href="@@webRoot/pages/why-our-theme.html">
-      Why Our Theme
-        </a>
+                                    </a>
+                                </div>
 
-                </li>
-                <li class="nav-item ">
-                    <a class="nav-link " href="@@webRoot/pages/blog.html">
-      Blog
-        </a>
 
-                </li>
-                <li class="nav-item ">
-                    <a class="nav-link " href="@@webRoot/pages/contact.html">
-      Contact
-        </a>
+                            </div>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link " href="@@webRoot/pages/blog.html">
+                                Blog
+                            </a>
 
-                </li>
-            </li>
-            <li class="nav-item ">
-                <a class="nav-link " href="@@webRoot/pages/hire-us.html">
-  Hire Us
-    </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link " href="@@webRoot/pages/contact.html">
+                                Contact
+                            </a>
 
-            </li>
-            </ul>
-            <div class="ms-lg-auto p-3 p-lg-0 ">
-                <a href="#" class="btn btn-primary">Store</a>
+                        </li>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link " href="@@webRoot/pages/hire-us.html">
+                                Hire Us
+                            </a>
+
+                        </li>
+                    </ul>
+                    <div class="ms-auto mt-3 mt-lg-0 d-flex align-items-center">
+                        <a href="#" class="btn btn-primary">Store</a>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</nav>
+    </nav>
+</header>
