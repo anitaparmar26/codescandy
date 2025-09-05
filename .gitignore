@@ -1,4 +1,6 @@
 node_modules/
-# dist/
+dist/
 .temp/
-.DS_Store
+**/.DS_Store
+.vscode/
+design-system/
