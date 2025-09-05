@@ -16,6 +16,25 @@
                   <h1 class="mb-0 fw-bold">Tailwind Templates</h1>
                   <p class="mb-0">Tailwind Templates - Elevate your web design with our collection of Tailwind
                      Templates. Clean, efficient code and versatile layouts for any project.</p>
+                  <div class="d-flex flex-row gap-4 mt-5">
+                     <div class="form-check">
+                        <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault1"
+                           value="free">
+                        <label class="form-check-label" for="radioDefault1">
+                           Free
+                        </label>
+                     </div>
+                     <div class="form-check">
+                        <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault2"
+                           value="premium">
+                        <label class="form-check-label" for="radioDefault2">
+                           Premium
+                        </label>
+                     </div>
+                     <button id="clearFilterBtn" class="btn btn-success btn-sm ms-auto" style="display:none;"
+                        type="button">Clear Filter</button>
+                  </div>
+
                </div>
             </div>
          </div>
@@ -23,9 +42,9 @@
    </div>
    <div class="pb-8">
       <div class="container">
-         <div class="row gy-4">
+         <div class="row gy-4 ">
             <div class="col-lg-4 col-12">
-               <div class="card shadow-sm rounded-3">
+               <div class="card shadow-sm rounded-3" data-type="free">
                   <div>
                      <a href="./theme-single-gumrod.html"><img src="./assets/images/freshcart.jpg" alt="freshcart"
                            class="img-fluid rounded-3" /></a>
@@ -45,7 +64,7 @@
                </div>
             </div>
             <div class="col-lg-4 col-12">
-               <div class="card shadow-sm rounded-3">
+               <div class="card shadow-sm rounded-3" data-type="premium">
                   <div>
                      <a href="./theme-single-for-bstheme.html"><img src="./assets/images/freshcart.jpg" alt="freshcart"
                            class="img-fluid rounded-3" /></a>
@@ -65,7 +84,7 @@
                </div>
             </div>
             <div class="col-lg-4 col-12">
-               <div class="card shadow-sm rounded-3 card">
+               <div class="card shadow-sm rounded-3 card" data-type="premium">
                   <div>
                      <a href="theme-single-for-pro.html"><img
                            src="./assets/images/Block-Business-Professional-Template.webp" alt="freshcart"
@@ -91,6 +110,44 @@
    </div>
 
    <!--footer-->
+   <script>
+      // Filter cards by radio button, show all by default, show clear filter button when filtered
+      document.addEventListener('DOMContentLoaded', function () {
+         const radios = document.querySelectorAll('input[name="radioDefault"]');
+         const cards = document.querySelectorAll('.card.shadow-sm.rounded-3');
+         const clearBtn = document.getElementById('clearFilterBtn');
+
+         function filterCards() {
+            const checkedRadio = document.querySelector('input[name="radioDefault"]:checked');
+            if (checkedRadio) {
+               const selected = checkedRadio.value;
+               cards.forEach(card => {
+                  if (selected === 'free' && card.getAttribute('data-type') === 'free') {
+                     card.parentElement.style.display = '';
+                  } else if (selected === 'premium' && card.getAttribute('data-type') === 'premium') {
+                     card.parentElement.style.display = '';
+                  } else {
+                     card.parentElement.style.display = 'none';
+                  }
+               });
+               clearBtn.style.display = '';
+            } else {
+               cards.forEach(card => { card.parentElement.style.display = ''; });
+               clearBtn.style.display = 'none';
+            }
+         }
+
+         radios.forEach(radio => radio.addEventListener('change', filterCards));
+
+         clearBtn.addEventListener('click', function () {
+            radios.forEach(radio => { radio.checked = false; });
+            filterCards();
+         });
+
+         // Show all cards by default (no filter applied)
+         filterCards();
+      });
+   </script>
    @@include("partials/footer.html")
    <!-- Javascript-->
    @@include("partials/scripts.html")
