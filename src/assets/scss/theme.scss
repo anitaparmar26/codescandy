@@ -1,10 +1,9 @@
-/*
-Theme: Coach - Online Coaching Bootstrap Theme
-Product Page: https://easetemplate.com/html/coach
-*/
 
-// Inter Fonts
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+// Gabarito Fonts
+
+@import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&display=swap');
+
  
 // Font Awesome
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css");
@@ -27,5 +26,31 @@ Product Page: https://easetemplate.com/html/coach
 @media (max-width: 1440px) {
     .hero-img {
         max-width: 100%;
+    }
+}
+
+.nav-primary {
+     border-color: $gray-200;
+    .nav-link {
+        padding: 20px 28px;
+        text-align: start;
+        border-color: $gray-200;
+        background-color: transparent;
+        
+    
+        &.active {
+            border: 2px solid $gray-200;
+            border-bottom: 0px;
+            color: $gray-800;
+            font-weight: 500;
+            background-color: $gray-100;
+        }
+        &:hover {
+            border: 2px solid $gray-200;
+            color: $gray-800;
+            border-bottom: 0px;
+            background-color: $gray-100;
+            font-weight: 500;
+        }
     }
 }
