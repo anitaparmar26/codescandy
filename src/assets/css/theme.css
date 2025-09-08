@@ -16427,25 +16427,25 @@ a:hover {
   }
 }
 .nav-primary {
-  border-color: #f4f6f8;
+  background-color: #f9fafb;
+  border-bottom-color: #ea4c89;
 }
 .nav-primary .nav-link {
   padding: 20px 28px;
   text-align: start;
-  border-color: #f4f6f8;
-  background-color: transparent;
+  font-size: 22px;
+  line-height: 1;
+}
+.nav-primary .nav-link small, .nav-primary .nav-link .small {
+  font-size: 14px !important;
 }
 .nav-primary .nav-link.active {
-  border: 1px solid #f4f6f8;
-  border-bottom: 0px;
+  border-color: #ea4c89;
+  border-bottom-color: transparent;
   color: #212b36;
-  font-weight: 500;
-  background-color: #f9fafb;
 }
 .nav-primary .nav-link:hover {
-  border: 1px solid #f4f6f8;
+  border-color: #f9fafb;
+  border-bottom-color: transparent;
   color: #212b36;
-  border-bottom: 0px;
-  background-color: #f9fafb;
-  font-weight: 500;
 }
