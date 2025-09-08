@@ -16436,14 +16436,14 @@ a:hover {
   background-color: transparent;
 }
 .nav-primary .nav-link.active {
-  border: 2px solid #f4f6f8;
+  border: 1px solid #f4f6f8;
   border-bottom: 0px;
   color: #212b36;
   font-weight: 500;
   background-color: #f9fafb;
 }
 .nav-primary .nav-link:hover {
-  border: 2px solid #f4f6f8;
+  border: 1px solid #f4f6f8;
   color: #212b36;
   border-bottom: 0px;
   background-color: #f9fafb;
