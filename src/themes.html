@@ -8,90 +8,273 @@
 
 <body>
    @@include("partials/navbar.html")
-   <div class="pt-4 pt-lg-8 pb-4">
+   <div class="pt-4 pt-lg-8 mb-8">
       <div class="container">
-         <div class="row">
-            <div class="col-12">
-               <h1 class="fw-bold mb-3">Tailwind Templates</h1>
-               <p class="lead mb-0">Tailwind Templates - Elevate your web design with our collection of Tailwind
-                  Templates. Clean, efficient code and versatile layouts for any project.</p>
-
-               <div class="d-flex flex-row gap-4 mt-5">
-                  <div class="form-check">
-                     <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault1" value="free">
-                     <label class="form-check-label" for="radioDefault1">
-                        Free
-                     </label>
-                  </div>
-                  <div class="form-check">
-                     <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault2"
-                        value="premium">
-                     <label class="form-check-label" for="radioDefault2">
-                        Premium
-                     </label>
-                  </div>
-                  <button id="clearFilterBtn" class="btn btn-success btn-sm ms-auto" style="display:none;"
-                     type="button">Clear Filter</button>
-               </div>
+         <div class="row align-items-center">
+            <div class="col-lg-7 col-md-12 col-12 mb-3">
+               <h1 class=" mb-2">Templates</h1>
+               <p class="lead mb-0">Templates - Elevate your web design with our collection of Templates. Clean, efficient code and versatile layouts for any project.</p>
             </div>
+         <div class="col-lg-5 col-md-12 col-12">
+               <div class="d-flex align-items-center justify-content-end mb-3 mt-4">
+   <div class="d-flex flex-row gap-4 me-4 ">
+      <button id="clearFilterBtn" class="btn btn-success btn-sm" style="display:none;"
+                        type="button">  <span >Clear Filter</span></button>
+                     <div class="form-check">
+                        <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault1"
+                           value="free">
+                        <label class="form-check-label" for="radioDefault1">
+                           Free
+                        </label>
+                     </div>
+                     <div class="form-check">
+                        <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault2"
+                           value="premium">
+                        <label class="form-check-label" for="radioDefault2">
+                           Premium
+                        </label>
+                     </div>
+                     
+                  </div>
+               <div class="">
+   
+  <a class="btn btn-outline-white" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+   <span>
+     
+   </span>Filter
+  </a>
+
+
+</div>
+                 
+                  </div>
+                
+            </div>
+           <div class="col-12">
+              <div class="collapse" id="collapseExample">
+  <div class="card card-body">
+   <div class="row  gap-3">
+   <div class="col-lg-3 col-md-6 col-12">
+   <div>
+       <h4>Framework</h4>
+   </div>
+   
+   <div class="form-check">
+     <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault1">
+     <label class="form-check-label" for="flexCheckDefault1">
+       Bootstrap
+     </label>
+   </div>
+   <div class="form-check">
+     <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault2">
+     <label class="form-check-label" for="flexCheckDefault2">
+       Tailwind
+     </label>
+   </div>
+   <div class="form-check">
+     <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault3">
+     <label class="form-check-label" for="flexCheckDefault3">
+       React
+     </label>
+   </div>
+   <div class="form-check">
+     <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault4">
+     <label class="form-check-label" for="flexCheckDefault4">
+       Vue
+     </label>
+   </div>
+   <div class="form-check">
+     <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault5">
+     <label class="form-check-label" for="flexCheckDefault5">
+       Angular
+     </label>
+   </div>
+   <div class="form-check">
+       <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault6">
+       <label class="form-check-label" for="flexCheckDefault6">
+          Next.js
+       </label>
+       </div>
+   <div class="form-check">
+       <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault7">
+       <label class="form-check-label" for="flexCheckDefault7">   
+          HTML
+         </label>
+       </div>
+
+</div>
+<div class="col-lg-3 col-md-6 col-12">
+   <div>
+       <h4>Tags</h4>
+   </div>
+   
+   <div class="form-check">
+     <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault1">
+     <label class="form-check-label" for="flexCheckDefault1">
+       Bootstrap
+     </label>
+   </div>
+   <div class="form-check">
+     <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault2">
+     <label class="form-check-label" for="flexCheckDefault2">
+       Tailwind
+     </label>
+   </div>
+   <div class="form-check">
+     <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault3">
+     <label class="form-check-label" for="flexCheckDefault3">
+       React
+     </label>
+   </div>
+   <div class="form-check">
+     <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault4">
+     <label class="form-check-label" for="flexCheckDefault4">
+       Vue
+     </label>
+   </div>
+   <div class="form-check">
+     <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault5">
+     <label class="form-check-label" for="flexCheckDefault5">
+       Angular
+     </label>
+   </div>
+   <div class="form-check">
+       <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault6">
+       <label class="form-check-label" for="flexCheckDefault6">
+          Next.js
+       </label>
+       </div>
+   <div class="form-check">
+       <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault7">
+       <label class="form-check-label" for="flexCheckDefault7">   
+          HTML
+         </label>
+       </div>
+
+</div>
+<div class="col-lg-3 col-md-6 col-12">
+   <div>
+       <h4>Categories</h4>
+   </div>
+   
+   <div class="form-check">
+     <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault1">
+     <label class="form-check-label" for="flexCheckDefault1">
+       Bootstrap
+     </label>
+   </div>
+   <div class="form-check">
+     <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault2">
+     <label class="form-check-label" for="flexCheckDefault2">
+       Tailwind
+     </label>
+   </div>
+   <div class="form-check">
+     <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault3">
+     <label class="form-check-label" for="flexCheckDefault3">
+       React
+     </label>
+   </div>
+   <div class="form-check">
+     <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault4">
+     <label class="form-check-label" for="flexCheckDefault4">
+       Vue
+     </label>
+   </div>
+   <div class="form-check">
+     <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault5">
+     <label class="form-check-label" for="flexCheckDefault5">
+       Angular
+     </label>
+   </div>
+   <div class="form-check">
+       <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault6">
+       <label class="form-check-label" for="flexCheckDefault6">
+          Next.js
+       </label>
+       </div>
+   <div class="form-check">
+       <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault7">
+       <label class="form-check-label" for="flexCheckDefault7">   
+          HTML
+         </label>
+       </div>
+
+</div>
+</div>
+</div>
+</div>
+           </div>
+            
          </div>
       </div>
    </div>
-
-   <div class="pt-8">
+  
+<div class="pb-8 mt-4">
       <div class="container">
-         <div class="row gx-10 gy-6">
-            <div class="col-xl-6 col-lg-6 col-md-12 col-12">
-               <div class=" ">
-                  <div class="card shadow mb-4 mb-lg-0 border-0">
-                     <a href="theme-single.html"><img src="../assets/images/freshcart.jpg" alt="Image"
-                           class="img-fluid rounded-3 w-100" /></a>
+         <div class="row gy-4 ">
+            <div class="col-lg-4 col-12">
+               <div class="card shadow-sm rounded-3" data-type="free">
+                  <div>
+                     <a href="./theme-single-gumrod.html"><img src="./assets/images/freshcart.jpg" alt="freshcart"
+                           class="img-fluid rounded-3" /></a>
                   </div>
-                  <a href="#!">
-                     <div class="pt-5 pb-2 px-4">
-                        <div class="d-flex align-items-center justify-content-between mb-1">
-                           <h2 class="h4 mb-0">Freshcart - E-commerce HTML Tailwind Template</h2>
-                           <h3 class="mb-0 h4">$49</h3>
-                        </div>
-                        <p class="text-muted mb-0 small">Premium TailwindCSS Templates</p>
+                  <div class="card-body p-4 border-top">
+                     <div class="d-flex flex-row justify-content-between gap-4">
+
+                        <h2 class="mb-0 fs-5 text-truncate ">
+                           <a href="" class="text-inherit ">Freshcart - Tailwind Template</a>
+                        </h2>
+
+                        <h4 class="mb-0 fs-5">Free</h4>
+
                      </div>
-                  </a>
+
+                  </div>
                </div>
             </div>
-            <div class="col-xl-6 col-lg-6 col-md-12 col-12">
-               <div class=" ">
-                  <div class="card shadow mb-4 mb-lg-0 border-0">
-                     <a href="theme-single.html"><img src="../assets/images/freshcart.jpg" alt="Image"
-                           class="img-fluid rounded-3 w-100" /></a>
+            <div class="col-lg-4 col-12">
+               <div class="card shadow-sm rounded-3" data-type="premium">
+                  <div>
+                     <a href="./theme-single-for-bstheme.html"><img src="./assets/images/freshcart.jpg" alt="freshcart"
+                           class="img-fluid rounded-3" /></a>
                   </div>
-                  <a href="#!">
-                     <div class="pt-5 pb-2 px-4">
-                        <div class="d-flex align-items-center justify-content-between mb-1">
-                           <h2 class="h4 mb-0">Freshcart - E-commerce HTML Tailwind Template</h2>
-                           <h3 class="mb-0 h4">$49</h3>
-                        </div>
-                        <p class="text-muted mb-0 small">Premium TailwindCSS Templates</p>
+                  <div class="card-body p-4 border-top">
+                     <div class="d-flex flex-row justify-content-between gap-4">
+
+                        <h2 class="mb-0 fs-5 text-truncate ">
+                           <a href="" class="text-inherit ">Freshcart - Tailwind Template</a>
+                        </h2>
+
+                        <h4 class="mb-0 fs-5">$49</h4>
+
                      </div>
-                  </a>
+
+                  </div>
                </div>
             </div>
-            <div class="col-xl-6 col-lg-6 col-md-12 col-12">
-               <div class=" ">
-                  <div class="card shadow mb-4 mb-lg-0 border-0">
-                     <a href="theme-single.html"><img src="../assets/images/freshcart.jpg" alt="Image"
-                           class="img-fluid rounded-3 w-100" /></a>
+            <div class="col-lg-4 col-12">
+               <div class="card shadow-sm rounded-3 card" data-type="premium">
+                  <div>
+                     <a href="theme-single-for-pro.html"><img
+                           src="./assets/images/Block-Business-Professional-Template.webp" alt="freshcart"
+                           class="img-fluid rounded-3" /></a>
                   </div>
-                  <a href="#!">
-                     <div class="pt-5 pb-2 px-4">
-                        <div class="d-flex align-items-center justify-content-between mb-1">
-                           <h2 class="h4 mb-0">Freshcart - E-commerce HTML Tailwind Template</h2>
-                           <h3 class="mb-0 h4">$49</h3>
-                        </div>
-                        <p class="text-muted mb-0 small">Premium TailwindCSS Templates</p>
+                  <div class="card-body p-4 border-top">
+                     <div class="d-flex flex-row justify-content-between gap-4">
+
+                        <h2 class="mb-0 fs-5 text-truncate">
+                           <a href="" class="text-inherit">Block – Business / Professional HTML Template</a>
+                        </h2>
+
+                        <h4 class="mb-0 fs-5">$49</h4>
+
                      </div>
-                  </a>
+
+                  </div>
                </div>
             </div>
+
          </div>
       </div>
    </div>
@@ -133,7 +316,7 @@
          </div>
       </div>
    </div>
-   <script>
+      <script>
       // Filter cards by radio button, show all by default, show clear filter button when filtered
       document.addEventListener('DOMContentLoaded', function () {
          const radios = document.querySelectorAll('input[name="radioDefault"]');
@@ -171,7 +354,7 @@
          filterCards();
       });
    </script>
-   <!--footer-->
+      <!--footer-->
    @@include("partials/footer.html")
    <!-- Javascript-->
    @@include("partials/scripts.html")
