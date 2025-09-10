@@ -1,4 +1,5 @@
 <!-- footer -->
+
 <footer class="pt-8 bg-light">
 	<div class="container">
 		<div class="row">
@@ -8,10 +9,27 @@
 				</a>
 				<p class="mb-4">We are building a High-quality premium bootstrap themes & templates. Make your design
 					workflow faster and easier.</p>
-				<form class="d-flex  my-4 px-0">
-					<input class="form-control me-2" type="email" placeholder="Enter Email Address" required="">
-					<button class="btn btn-primary" type="submit">Subscribe</button>
-				</form>
+				<form class="input-with-button" action="https://ghumorad.com/follow_from_embed_form" method="post"
+	id="gumroad-follow-form-embed"><input type="hidden" class="form-control" name="seller_id" value="6516268777655" /><input
+		id="gumroad-follow-form-embed-input" class="form-control" type="email" placeholder="Your email address" name="email"
+		value="" /><button class="btn btn-primary" type="submit" id="gumroad-follow-form-embed-button">Subscribe</button>
+</form>
+<!-- Thank You Modal -->
+<div class="modal fade" id="thankYouModal" tabindex="-1" aria-labelledby="thankYouModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header border-0">
+        <h5 class="modal-title" id="thankYouModalLabel">Thank You!</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center">
+        <p>Thank you for subscribing!</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ...existing code... -->
+					
 				<div>
 					<a href="https://github.com/codescandy" target="_blank" rel="nofollow"
 						class="text-inherit me-3 fab fa-github"></a>
@@ -89,3 +107,17 @@
 	</div>
 
 </footer>
+<!-- ...existing code... -->
+<script>
+document.getElementById('gumroad-follow-form-embed').addEventListener('submit', function(e) {
+    e.preventDefault();
+    var thankYouModal = new bootstrap.Modal(document.getElementById('thankYouModal'));
+    thankYouModal.show();
+    this.reset();
+    // Auto close modal after 20 seconds (20000 ms)
+    setTimeout(function() {
+        thankYouModal.hide();
+    }, 20000);
+});
+</script>
+<!-- ...existing code... -->
