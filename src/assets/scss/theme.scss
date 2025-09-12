@@ -55,6 +55,15 @@
                 font-size: 15px !important;
 
             }
+             &.active {
+
+            line-height: 1.4;
+
+
+
+
+
+        }
 
 
         }
@@ -65,7 +74,7 @@
         &.active {
            border-color: $primary;
            border-bottom-color: transparent;
-            line-height: 1.4;
+
 
 
             color: $gray-800;

@@ -16453,6 +16453,9 @@ a:hover {
   .nav-primary .nav-link i {
     font-size: 15px !important;
   }
+  .nav-primary .nav-link.active {
+    line-height: 1.4;
+  }
 }
 .nav-primary .nav-link small, .nav-primary .nav-link .small {
   font-size: 14px !important;
@@ -16460,7 +16463,6 @@ a:hover {
 .nav-primary .nav-link.active {
   border-color: #ea4c89;
   border-bottom-color: transparent;
-  line-height: 1.4;
   color: #212b36;
 }
 .nav-primary .nav-link:hover {
